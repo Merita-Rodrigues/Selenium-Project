@@ -25,12 +25,11 @@ public class WebBase implements AutoConst{
 	{
 		try
 		{
-			/*Reporter.log("Browser session started",true);*/
-			ChromeOptions chromeOptions = new ChromeOptions();
+		/*	ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--headless");	
-			driver = new ChromeDriver(chromeOptions);	
-		/*	driver = new ChromeDriver();
-			driver.manage().window().maximize();*/
+			driver = new ChromeDriver(chromeOptions);*/	
+			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 			Thread.sleep(2000);
 
 		} catch(Exception e)

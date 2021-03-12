@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="testng2" duration-ms="50563" started-at="2021-03-12T11:56:37Z" finished-at="2021-03-12T11:57:28Z">
+  <suite name="testng2" duration-ms="46807" started-at="2021-03-12T12:31:05Z" finished-at="2021-03-12T12:31:52Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="50563" started-at="2021-03-12T11:56:37Z" finished-at="2021-03-12T11:57:28Z">
+    <test name="Test" duration-ms="46807" started-at="2021-03-12T12:31:05Z" finished-at="2021-03-12T12:31:52Z">
       <class name="Script.Amzn">
-        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:Script.Amzn@153f5a29]" name="OpenApplication" is-config="true" duration-ms="21151" started-at="2021-03-12T11:56:37Z" finished-at="2021-03-12T11:56:58Z">
+        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:Script.Amzn@153f5a29]" name="OpenApplication" is-config="true" duration-ms="9765" started-at="2021-03-12T12:31:05Z" finished-at="2021-03-12T12:31:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method status="PASS" signature="login()[pri:1, instance:Script.Amzn@153f5a29]" name="login" duration-ms="25743" started-at="2021-03-12T11:56:58Z" finished-at="2021-03-12T11:57:24Z">
+        <test-method status="PASS" signature="login()[pri:1, instance:Script.Amzn@153f5a29]" name="login" duration-ms="34255" started-at="2021-03-12T12:31:15Z" finished-at="2021-03-12T12:31:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="closeApplication()[pri:0, instance:Script.Amzn@153f5a29]" name="closeApplication" is-config="true" duration-ms="3648" started-at="2021-03-12T11:57:24Z" finished-at="2021-03-12T11:57:28Z">
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:Script.Amzn@153f5a29]" name="closeApplication" is-config="true" duration-ms="2758" started-at="2021-03-12T12:31:49Z" finished-at="2021-03-12T12:31:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
