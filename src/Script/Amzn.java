@@ -29,6 +29,7 @@ public class Amzn extends WebBase
 		String actualString = driver.findElement(By.xpath("//*[@id=\"leftNav_345724\"]/div[1]/a/span[1]")).getText();
 		Thread.sleep(2000);
 		Assert.assertTrue(actualString.contains("Expand all"));
+		System.out.println("Verification successful");
 	}
 
 }
