@@ -2,19 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="testng2" duration-ms="40046" started-at="2021-03-12T09:18:36Z" finished-at="2021-03-12T09:19:16Z">
+  <suite name="testng2" duration-ms="50563" started-at="2021-03-12T11:56:37Z" finished-at="2021-03-12T11:57:28Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="40046" started-at="2021-03-12T09:18:36Z" finished-at="2021-03-12T09:19:16Z">
+    <test name="Test" duration-ms="50563" started-at="2021-03-12T11:56:37Z" finished-at="2021-03-12T11:57:28Z">
       <class name="Script.Amzn">
-        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:Script.Amzn@26f67b76]" name="OpenApplication" is-config="true" duration-ms="12183" started-at="2021-03-12T09:18:36Z" finished-at="2021-03-12T09:18:48Z">
+        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:Script.Amzn@153f5a29]" name="OpenApplication" is-config="true" duration-ms="21151" started-at="2021-03-12T11:56:37Z" finished-at="2021-03-12T11:56:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method status="PASS" signature="login()[pri:1, instance:Script.Amzn@26f67b76]" name="login" duration-ms="27827" started-at="2021-03-12T09:18:48Z" finished-at="2021-03-12T09:19:16Z">
+        <test-method status="PASS" signature="login()[pri:1, instance:Script.Amzn@153f5a29]" name="login" duration-ms="25743" started-at="2021-03-12T11:56:58Z" finished-at="2021-03-12T11:57:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:Script.Amzn@153f5a29]" name="closeApplication" is-config="true" duration-ms="3648" started-at="2021-03-12T11:57:24Z" finished-at="2021-03-12T11:57:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
       </class> <!-- Script.Amzn -->
     </test> <!-- Test -->
   </suite> <!-- testng2 -->

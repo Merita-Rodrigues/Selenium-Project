@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class WebBase implements AutoConst{
@@ -28,9 +29,9 @@ public class WebBase implements AutoConst{
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--headless");	
 			driver = new ChromeDriver(chromeOptions);	
-			/*driver = new ChromeDriver();
+		/*	driver = new ChromeDriver();
 			driver.manage().window().maximize();*/
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 
 		} catch(Exception e)
 		{
@@ -39,6 +40,12 @@ public class WebBase implements AutoConst{
 		}
 	}
 
-
+	@AfterClass
+	public void closeApplication() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		driver.quit();
+	}	
+	 
 
 }
