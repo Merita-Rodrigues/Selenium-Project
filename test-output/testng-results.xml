@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Browser session started]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18082" started-at="2021-03-12T06:10:41Z" finished-at="2021-03-12T06:10:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18082" started-at="2021-03-12T06:10:41Z" finished-at="2021-03-12T06:10:59Z">
+      <class name="Script.FacebookLogin">
+        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:Script.FacebookLogin@64bfbc86]" name="OpenApplication" is-config="true" duration-ms="12850" started-at="2021-03-12T06:10:41Z" finished-at="2021-03-12T06:10:54Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser session started]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- OpenApplication -->
+        <test-method status="PASS" signature="flip()[pri:0, instance:Script.FacebookLogin@64bfbc86]" name="flip" duration-ms="5202" started-at="2021-03-12T06:10:54Z" finished-at="2021-03-12T06:10:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flip -->
+      </class> <!-- Script.FacebookLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
