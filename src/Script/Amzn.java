@@ -22,7 +22,6 @@ public class Amzn extends WebBase
 		Thread.sleep(2000);
 
 		AmznPage amz = new AmznPage(driver);
-
 		Select drp = new Select(driver.findElement(By.id("searchDropdownBox")));
 		Thread.sleep(2000);
 		drp.selectByVisibleText("Books");

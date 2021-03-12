@@ -15,7 +15,6 @@ public class WebBase implements AutoConst{
 
 	}
 
-
 	public static WebDriver driver;
 	@BeforeClass
 	public void OpenApplication()
@@ -25,6 +24,7 @@ public class WebBase implements AutoConst{
 			/*	ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--headless");	
 			driver = new ChromeDriver(chromeOptions);*/	
+			
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			Thread.sleep(2000);
