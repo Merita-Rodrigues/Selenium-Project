@@ -2,6 +2,7 @@ package generic;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -21,7 +22,7 @@ public class WebBase implements AutoConst{
 	{
 		try
 		{
-			/*	ChromeOptions chromeOptions = new ChromeOptions();
+				/*ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--headless");	
 			driver = new ChromeDriver(chromeOptions);*/	
 			
