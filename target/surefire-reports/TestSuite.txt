@@ -1,19 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 397.084 s <<< FAILURE! - in TestSuite
-flip(Script.FacebookLogin)  Time elapsed: 85.682 s  <<< FAILURE!
-java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at Script.FacebookLogin.flip(FacebookLogin.java:20)
-
-login(Script.Amzn)  Time elapsed: 300.091 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: 
-timeout: Timed out receiving message from renderer: 295.906
-  (Session info: headless chrome=89.0.4389.82)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DELL-FALCA-34ZL', ip: '169.254.76.67', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_271'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\5016\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:51400}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f18dda1dbc75310ef64c58b07deeaae8
-	at Script.Amzn.login(Amzn.java:19)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.685 s - in TestSuite

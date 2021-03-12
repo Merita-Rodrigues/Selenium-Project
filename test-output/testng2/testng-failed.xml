@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [testng2]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Script.Amzn">
+        <methods>
+          <include name="OpenApplication"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- Script.Amzn -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [testng2] -->

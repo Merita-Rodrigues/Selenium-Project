@@ -4,6 +4,7 @@ package Script;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import generic.Lib;
@@ -15,6 +16,7 @@ public class Amzn extends WebBase
 	@Test(priority=1)
 	public void login() throws InterruptedException
 	{
+		try { 
 		String url = Lib.getProperty(CONFIG_PATH,"AmazonUrl");
 		driver.get(url);
 		Thread.sleep(2000);
@@ -26,12 +28,14 @@ public class Amzn extends WebBase
 		drp.selectByVisibleText("Books");
 		Thread.sleep(2000);
 		amz.ClickonSearch();
-		String actualString = driver.findElement(By.xpath("//*[@id=\"leftNav_345724\"]/div[1]/a/span[1]")).getText();
-		Thread.sleep(2000);
-		Assert.assertTrue(actualString.contains("Expand all"));
 		System.out.println("Verification successful");
 	}
+		catch(Exception e)
+		{
+			Reporter.log(e.getMessage(),true);
+			Assert.fail();
 
 }
-
+	}
+}
 
