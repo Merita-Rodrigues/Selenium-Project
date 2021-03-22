@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="testng2" duration-ms="50694" started-at="2021-03-12T15:29:28Z" finished-at="2021-03-12T15:30:18Z">
+  <suite name="testng2" duration-ms="67258" started-at="2021-03-19T14:53:25 IST" finished-at="2021-03-19T14:54:32 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="50694" started-at="2021-03-12T15:29:28Z" finished-at="2021-03-12T15:30:18Z">
+    <test name="Test" duration-ms="67258" started-at="2021-03-19T14:53:25 IST" finished-at="2021-03-19T14:54:32 IST">
       <class name="Script.AmazonTitle">
-        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:Script.AmazonTitle@69d9c55]" name="OpenApplication" is-config="true" duration-ms="4852" started-at="2021-03-12T15:29:28Z" finished-at="2021-03-12T15:29:33Z">
+        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:Script.AmazonTitle@56ef9176]" name="OpenApplication" is-config="true" duration-ms="4945" started-at="2021-03-19T14:54:13 IST" finished-at="2021-03-19T14:54:18 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method status="PASS" signature="amazonlogin()[pri:0, instance:Script.AmazonTitle@69d9c55]" name="amazonlogin" duration-ms="15045" started-at="2021-03-12T15:29:33Z" finished-at="2021-03-12T15:29:48Z">
+        <test-method status="PASS" signature="amazonlogin()[pri:0, instance:Script.AmazonTitle@56ef9176]" name="amazonlogin" duration-ms="10746" started-at="2021-03-19T14:54:18 IST" finished-at="2021-03-19T14:54:29 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- amazonlogin -->
-        <test-method status="PASS" signature="signup()[pri:0, instance:Script.AmazonTitle@69d9c55]" name="signup" duration-ms="11" started-at="2021-03-12T15:29:48Z" finished-at="2021-03-12T15:29:48Z">
+        <test-method status="PASS" signature="signup()[pri:0, instance:Script.AmazonTitle@56ef9176]" name="signup" duration-ms="27" started-at="2021-03-19T14:54:29 IST" finished-at="2021-03-19T14:54:29 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signup -->
-        <test-method status="PASS" signature="closeApplication()[pri:0, instance:Script.AmazonTitle@69d9c55]" name="closeApplication" is-config="true" duration-ms="2673" started-at="2021-03-12T15:29:48Z" finished-at="2021-03-12T15:29:50Z">
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:Script.AmazonTitle@56ef9176]" name="closeApplication" is-config="true" duration-ms="3207" started-at="2021-03-19T14:54:29 IST" finished-at="2021-03-19T14:54:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
       </class> <!-- Script.AmazonTitle -->
       <class name="Script.Amzn">
-        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:Script.Amzn@7f560810]" name="OpenApplication" is-config="true" duration-ms="3904" started-at="2021-03-12T15:29:50Z" finished-at="2021-03-12T15:29:54Z">
+        <test-method status="PASS" signature="OpenApplication()[pri:0, instance:Script.Amzn@13805618]" name="OpenApplication" is-config="true" duration-ms="7248" started-at="2021-03-19T14:53:25 IST" finished-at="2021-03-19T14:53:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method status="PASS" signature="login()[pri:1, instance:Script.Amzn@7f560810]" name="login" duration-ms="21499" started-at="2021-03-12T15:29:54Z" finished-at="2021-03-12T15:30:16Z">
+        <test-method status="PASS" signature="login()[pri:1, instance:Script.Amzn@13805618]" name="login" duration-ms="38240" started-at="2021-03-19T14:53:32 IST" finished-at="2021-03-19T14:54:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="closeApplication()[pri:0, instance:Script.Amzn@7f560810]" name="closeApplication" is-config="true" duration-ms="2673" started-at="2021-03-12T15:30:16Z" finished-at="2021-03-12T15:30:18Z">
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:Script.Amzn@13805618]" name="closeApplication" is-config="true" duration-ms="2773" started-at="2021-03-19T14:54:10 IST" finished-at="2021-03-19T14:54:13 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
