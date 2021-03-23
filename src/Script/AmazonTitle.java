@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import generic.WebBase;
 
 
+
 public class AmazonTitle extends WebBase {
 	
 	@Test(priority=1)
