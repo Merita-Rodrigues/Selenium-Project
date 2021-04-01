@@ -1,0 +1,21 @@
+node {
+    
+	stage('SCM checkout'){
+		git 'https://github.com/Merita-Rodrigues/Selenium-Project.git'
+	}
+
+	stage('Compile Package')  {
+		def mvnHome = tool name: 'Maven 3.6.3', type: 'maven'
+			bat "${mvnHome}/bin/mvn package"
+	}
+	notifySuccessful()
+}
+
+def notifySuccessful() {
+  emailext (
+     	to: 'rmarita@palcnetworks.com',
+        subject: "SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+        body: """<p>SUCCESSFUL: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+        <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+    )
+}
