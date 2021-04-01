@@ -32,7 +32,7 @@ pipeline{
 
 				withMaven(maven : 'Maven 3.6.3'){
 
-					bat 'mvn test'
+					bat 'mvn deploy'
 
 				}
 			}
