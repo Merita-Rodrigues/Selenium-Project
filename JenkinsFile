@@ -1,9 +1,5 @@
 node {
     
-	stage('SCM checkout'){
-		git 'https://github.com/Merita-Rodrigues/Selenium-Project.git'
-	}
-
 	stage('Compile Package')  {
 		def mvnHome = tool name: 'Maven 3.6.3', type: 'maven'
 			bat "${mvnHome}/bin/mvn package"
