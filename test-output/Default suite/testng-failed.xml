@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Script.Amzn">
+      <class name="Script.ToastMessage">
         <methods>
+          <include name="verifytoast"/>
           <include name="OpenApplication"/>
-          <include name="login"/>
+          <include name="closeApplication"/>
         </methods>
-      </class> <!-- Script.Amzn -->
+      </class> <!-- Script.ToastMessage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

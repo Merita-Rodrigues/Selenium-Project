@@ -1,0 +1,247 @@
+def config;
+
+node(){
+
+    configFileProvider([configFile(fileId: 'b7e015c5-e165-4e20-b075-0288b731af67', targetLocation: 'AppEmailConfig')]) {
+
+        config = readJSON file: 'AppEmailConfig'
+
+    }
+
+}
+
+ 
+
+pipeline {
+
+    agent any
+
+ 
+
+    tools {nodejs "node"}
+
+ 
+
+    stages {
+
+        stage('Git Checkout') {
+
+          steps {
+
+            script {
+
+              if(env.GIT_BRANCH == 'spaceage-application/release') {
+
+                bat 'git submodule add -f -b "release"
+https://bitbucket.polariswireless.com/scm/aweb/aigis-web-models.git SA-application/aigis-web-models
+'
+
+                bat 'git submodule add -f -b "release"
+https://bitbucket.polariswireless.com/scm/webkit/webui-toolkit.git SA-application/webui-toolkit
+'
+
+              }
+
+              else {
+
+                bat 'git submodule add -f -b "development"
+https://bitbucket.polariswireless.com/scm/aweb/aigis-web-models.git SA-application/aigis-web-models
+'
+
+                bat 'git submodule add -f -b "development"
+https://bitbucket.polariswireless.com/scm/webkit/webui-toolkit.git SA-application/webui-toolkit
+'
+
+              }
+
+              bat 'git submodule update --init'
+
+              bat 'git submodule update --remote'
+
+              bat 'git submodule update --remote --recursive'
+
+            }
+
+          }
+
+        }
+
+        stage('React App Build') {
+
+            steps {
+
+                dir("SA-application") {
+
+                  bat 'npm install'
+
+                  bat 'npm run build-prod'
+
+                }
+
+            }
+
+        }
+
+        stage('Dev Environment Update') {
+
+          when {
+
+            expression { env.GIT_BRANCH ==~ 'spaceage-application/development'}
+
+          }
+
+          steps {
+
+            script {
+
+                def sourcePath = '%WORKSPACE%/SA-application/site/content'
+
+                def destinatonPath = 'C:/inetpub/pw/aigis/Aigis WebApp'
+
+                bat("@RD /Q /S \"${destinatonPath}\"")
+
+                bat("xcopy /S /I /E /Y \"${sourcePath}\" \"${destinatonPath}\"")
+
+              }
+
+          }
+
+        }
+
+        stage('MSI Installer Generation') {
+
+          steps {
+
+            script {
+
+              def msbuild = tool name: 'Microsoft Visual Studio', type: 'hudson.plugins.msbuild.MsBuildInstallation'
+
+              def solutionPath = 'SA-client-installer'
+
+              def versionNumber
+
+              def projectPath = '%WORKSPACE%/SA-application/site/content/'
+
+              if(env.GIT_BRANCH == 'spaceage-application/release') {
+
+                versionNumber = '12.0.23.%BUILD_NUMBER%'
+
+                bat "\"${msbuild}\" \"${solutionPath}\" /p:versionNumber=\"${versionNumber}\" /p:Workspace=\"${projectPath}\" -t:rebuild"
+
+              }
+
+              else {
+
+                versionNumber = '12.0.23.%BUILD_NUMBER%'
+
+                bat "\"${msbuild}\" \"${solutionPath}\" /p:versionNumber=\"${versionNumber}\" /p:Workspace=\"${projectPath}\" -t:rebuild"
+
+              }
+
+            }
+
+          }
+
+        }
+
+        stage('Artifact Archival') {
+
+          steps {
+
+            dir('SA-client-installer/bin/Debug') {
+
+                archiveArtifacts artifacts: '*.msi', fingerprint: true
+
+            }
+
+          }
+
+        }
+
+        stage('Email Notification') {
+
+            steps {
+
+              script{
+
+                env.deploymentContext = ''
+
+                if(env.GIT_BRANCH == 'spaceage-application/release') {
+
+                  env.pipelineType = 'Release'
+
+                  env.MailerList = config.ReleaseBuildMailToList
+
+                }
+
+                else {
+
+                  env.pipelineType = 'Daily'
+
+                  env.deploymentContext = 'Build Deployed at:
+http://10.90.100.116:8081/
+<br/><br/>'
+
+                  env.MailerList = config.DailyBuildMailToList
+
+                }
+
+              }
+
+                emailext body: "Build Status: ${currentBuild.currentResult} <br/><br/> Pipeline: ${env.JOB_NAME} <br/><br/> Build number: ${env.BUILD_NUMBER} <br/><br/> Build Details: ${env.BUILD_URL} <br/><br/> ${env.deploymentContext} Git Changelog: <div style='padding-left: 30px; padding-bottom: 15px;'>"+ getChangeString() +"</div>",
+
+                subject: "${env.pipelineType} Build Status - ${currentBuild.currentResult}",
+
+                to: "${env.MailerList}"
+
+            }
+
+        }
+
+      }
+
+}
+
+ 
+
+@NonCPS
+
+def getChangeString() {
+
+    MAX_MSG_LEN = 100
+
+    def changeString = ""
+
+ 
+
+    echo "Gathering SCM changes"
+
+    def changeLogSets = currentBuild.changeSets
+
+    for (int i = 0; i < changeLogSets.size(); i++) {
+
+        def entries = changeLogSets[i].items
+
+        for (int j = 0; j < entries.length; j++) {
+
+            def entry = entries[j]
+
+            truncated_msg = entry.msg.take(MAX_MSG_LEN)
+
+            changeString += " - ${truncated_msg} [${entry.author}]<br/>"
+
+        }
+
+    }
+
+ 
+
+    if (!changeString) {
+
+        changeString = " - No new changes"
+
+    }
+
+    return changeString
+
+}
