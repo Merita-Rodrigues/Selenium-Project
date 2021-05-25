@@ -6,7 +6,7 @@
 </listeners>
   <test name="test">
     <classes>
-<class name="Script.Tooltip"/>
+<class name="Script.Amzn"/>
 </classes>
 </test>
 <!-- <test name="Four" parallel = "methods">

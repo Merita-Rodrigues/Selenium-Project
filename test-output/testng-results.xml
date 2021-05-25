@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="testngamazon" duration-ms="18674" started-at="2021-05-25T19:06:48 IST" finished-at="2021-05-25T19:07:07 IST">
+  <suite name="testngamazon" duration-ms="35285" started-at="2021-05-25T19:37:18 IST" finished-at="2021-05-25T19:37:53 IST">
     <groups>
     </groups>
-    <test name="test" duration-ms="18674" started-at="2021-05-25T19:06:48 IST" finished-at="2021-05-25T19:07:07 IST">
-      <class name="Script.Tooltip">
-        <test-method status="PASS" signature="openApplication()[pri:0, instance:Script.Tooltip@2173f6d9]" name="openApplication" is-config="true" duration-ms="5764" started-at="2021-05-25T19:06:49 IST" finished-at="2021-05-25T19:06:54 IST">
+    <test name="test" duration-ms="35285" started-at="2021-05-25T19:37:18 IST" finished-at="2021-05-25T19:37:53 IST">
+      <class name="Script.Amzn">
+        <test-method status="PASS" signature="openApplication()[pri:0, instance:Script.Amzn@2173f6d9]" name="openApplication" is-config="true" duration-ms="7272" started-at="2021-05-25T19:37:18 IST" finished-at="2021-05-25T19:37:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openApplication -->
-        <test-method status="PASS" signature="verifytoast()[pri:0, instance:Script.Tooltip@2173f6d9]" name="verifytoast" duration-ms="11768" started-at="2021-05-25T19:06:54 IST" finished-at="2021-05-25T19:07:06 IST">
+        <test-method status="PASS" signature="login()[pri:1, instance:Script.Amzn@2173f6d9]" name="login" duration-ms="26666" started-at="2021-05-25T19:37:25 IST" finished-at="2021-05-25T19:37:52 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifytoast -->
-        <test-method status="PASS" signature="closeApplication()[pri:0, instance:Script.Tooltip@2173f6d9]" name="closeApplication" is-config="true" duration-ms="1072" started-at="2021-05-25T19:07:06 IST" finished-at="2021-05-25T19:07:07 IST">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:Script.Amzn@2173f6d9]" name="closeApplication" is-config="true" duration-ms="1289" started-at="2021-05-25T19:37:52 IST" finished-at="2021-05-25T19:37:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-      </class> <!-- Script.Tooltip -->
+      </class> <!-- Script.Amzn -->
     </test> <!-- test -->
   </suite> <!-- testngamazon -->
 </testng-results>
