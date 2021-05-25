@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="test(failed)">
     <classes>
-      <class name="Script.Tooltip">
+      <class name="Script.Amzn">
         <methods>
-          <include name="verifytoast"/>
+          <include name="verifyTitle"/>
           <include name="openApplication"/>
           <include name="closeApplication"/>
         </methods>
-      </class> <!-- Script.Tooltip -->
+      </class> <!-- Script.Amzn -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [testngamazon] -->

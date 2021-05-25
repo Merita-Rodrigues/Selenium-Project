@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Script.ToastMessage">
+      <class name="Script.Amzn">
         <methods>
-          <include name="verifytoast"/>
-          <include name="OpenApplication"/>
-          <include name="closeApplication"/>
+          <include name="searchBook"/>
+          <include name="openApplication"/>
         </methods>
-      </class> <!-- Script.ToastMessage -->
+      </class> <!-- Script.Amzn -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

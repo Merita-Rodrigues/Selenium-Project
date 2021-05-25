@@ -1,15 +1,14 @@
 package generic;
 
 import java.util.HashMap;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Reporter;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-;
 
 public class WebBase implements AutoConst {
 	public static HashMap<String, WebDriver> driverObjMap = new HashMap<String, WebDriver>();
@@ -43,9 +42,9 @@ public class WebBase implements AutoConst {
 		}
 	}
 
-	@AfterClass
-	public void closeApplication() {
-		driver.quit();
-	}
+//	@AfterClass
+//	public void closeApplication() {
+//		driver.quit();
+//	}
 
 }
