@@ -9,9 +9,4 @@
 <class name="Script.ToastMessage"/>
 </classes>
 </test>
-<!-- <test name="Four" parallel = "methods">
-<classes>
-<class name="Script.ToastMessage"/>
-    </classes>
-  </test>  -->
   </suite> 
