@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class WebBase implements AutoConst {
@@ -42,9 +43,9 @@ public class WebBase implements AutoConst {
 		}
 	}
 
-//	@AfterClass
-//	public void closeApplication() {
-//		driver.quit();
-//	}
+	@AfterClass
+	public void closeApplication() {
+		driver.quit();
+	}
 
 }
