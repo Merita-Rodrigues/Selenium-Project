@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -17,7 +18,6 @@
 	<classpathentry kind="lib" path="jar/guava-25.0-jre.jar"/>
 	<classpathentry kind="lib" path="jar/okhttp-3.11.0.jar"/>
 	<classpathentry kind="lib" path="jar/okio-1.14.0.jar"/>
-	<classpathentry kind="lib" path="jar/org.apache.commons.io.jar"/>
 	<classpathentry kind="lib" path="jar/poi-examples-4.1.1.jar"/>
 	<classpathentry kind="lib" path="jar/poi-ooxml-schemas-4.1.1.jar"/>
 	<classpathentry kind="lib" path="jar/poi-excelant-4.1.1.jar"/>

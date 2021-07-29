@@ -24,7 +24,7 @@ public class WebBase implements AutoConst {
 	public void openApplication() throws InterruptedException {
 		try {
 			// for headless chrome browser make it as true
-			runHeadless(false);
+			runHeadless(true);
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			Reporter.log("Server down", true);

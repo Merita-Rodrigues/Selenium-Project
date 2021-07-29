@@ -1,7 +1,6 @@
 Script\CustomizedEmailableReport$TestResultsSorter.class
 generic\Lib.class
 Script\AmazonTitle.class
-Script\Tooltip.class
 pom\AmznPage.class
 pom\FacebookLoginPage.class
 Script\Amzn.class
